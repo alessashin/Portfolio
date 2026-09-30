@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Asshlene </title>
+
+
+  <!-- Bootstrap 5 CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+
+
+</head>
+<body data-bs-spy="scroll" 
+      data-bs-target="#navbar" 
+      data-bs-offset="70">
+
+  <!-- ================= 1. NAVBAR ================= -->
+  <nav id="navbar" 
+  class="navbar navbar-expand-lg 
+                navbar-dark bg-dark 
+                fixed-top shadow-sm">
+
+    <div class="container">
+      <a class="navbar-brand 
+              fw-bold" 
+              href="#"> Asshlene </a>
+
+      <button class="navbar-toggler" 
+              type="button" data-bs-toggle="collapse" 
+              data-bs-target="#navbarNav">
+
+        <span class="navbar-toggler-icon"></span>
+
+      </button>
+
+      <div 
+          class="collapse navbar-collapse" 
+          id="navbarNav">
+
+          /unordered item   and   list item
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" 
+                href="#hero">  Home
+              </a></li>
+
+          <li class="nav-item">
+              <a class="nav-link" 
+                  href="#about">   About
+                </a></li>
+
+          <li class="nav-item">
+            <a class="nav-link" 
+            href="#projects">   Projects
+          </a></li>
+
+           
+          <li class="nav-item">
+              <a class="nav-link" 
+                  href="#contact">   Contact
+                </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   
+
+  <!-- ================= 2. HERO SECTION ================= -->
+  <section 
+          id="hero" 
+          class="vh-100 d-flex 
+          align-items-center 
+          bg-light text-dark">
+    <div 
+        class="container text-center text-md-start">
+      <div 
+          class="row align-items-center">
+        <div class="col-md-7">
+          <p 
+              class="text-primary fw-semibold mb-1"
+                  >Hi, my name is   </p>
+          <h1 class="display-3 fw-bold mb-2"
+                  >Asshlene Albaño </h1>
+          <h2 class="h3 text-muted mb-4"
+                  >A Developer & Designer</h2>
+          <p class="lead mb-3">
+            I create clean, responsive, and user-friendly web applications using HTML, CSS, Java and Bootstrap.
+          </p>
+          <div>
+
+            <a href="#projects" 
+              class="btn btn-primary btn-lg me-2"
+                   >View Work</a>
+
+
+ <!-- if i want it downloadable -->
+            <!-- <a href="assets/Albano_Resume.pdf" 
+              class="btn btn-outline-dark btn-lg" download>
+              <i class="bi bi-download me-1"></i> 
+                    Resume -->
+
+        <a href="assets/Albano_Resume.pdf" 
+                    class="btn btn-outline-dark btn-lg" 
+                    target="_blank"
+                    >
+       <i class="bi bi-file-earmark-pdf me-1">
+            </i> View Resume
+</a>
+
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-5 text-center mt-5 mt-md-0">
+          <img src="assets/Dino.jpg" 
+                class="img-fluid rounded-circle shadow" 
+                alt="Profile Picture" />
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+  <!-- ================= 3. ABOUT & SKILLS SECTION ================= -->
+  <section 
+        id="about" 
+        class="py-5">
+
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-md-6 mb-4 mb-md-0">
+
+          <h2 
+              class="fw-bold mb-3"
+                >About Me</h2>
+          <p class="text-secondary">
+            I am an aspiring web developer who loves building web tools and solving technical challenges. Currently, I am focused on mastering frontend concepts and designing modern web experiences.
+          </p>
+          <p class="text-secondary">
+            When I'm not coding, you can find me exploring user experience trends or building creative personal projects.
+          </p>
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="h5 fw-bold mb-3"
+              >My Technical Skills</h3>
+          <div class="d-flex flex-wrap gap-2">
+
+            <span class="badge bg-dark-subtle text-dark p-2 fs-6">
+              <i class="bi bi-filetype-html me-1">
+              </i> HTML5</span>
+
+            <span class="badge bg-dark-subtle text-dark p-2 fs-6">
+              <i class="bi bi-filetype-css me-1">
+                  </i> CSS3</span>
+
+            <span class="badge bg-dark-subtle text-dark p-2 fs-6">
+              <i class="bi bi-bootstrap me-1">
+                  </i> Bootstrap 5</span>
+
+            <span class="badge bg-dark-subtle text-dark p-2 fs-6">
+              <i class="bi bi-filetype-js me-1">       
+                  </i> Java</span>
+
+            <span class="badge bg-dark-subtle text-dark p-2 fs-6">
+              <i class="bi bi-git me-1">
+                 </i> Git & GitHub</span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ================= 4. PROJECTS SECTION ================= -->
+  <section 
+        id="projects" 
+        class="py-5 bg-light">
+
+    <div class="container py-4">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">
+          Featured Projects</h2>
+        <p class="text-muted">
+          Here are a few projects I've built recently
+      </p>
+      </div>
+
+      <div class="row g-4">
+
+        <!-- Project 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img  src="https://via.placeholder.com/600x400" 
+                  class="card-img-top" 
+                  alt="Project 1">
+
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">
+                E-Commerce Web Page</h5>
+              <p class="card-text text-secondary flex-grow-1">
+                A responsive landing page for an online clothing shop built with standard HTML5 and Bootstrap grid.
+              </p>
+
+              <div class="mb-3">
+                <span class="badge bg-secondary">HTML</span>
+                <span class="badge bg-secondary">Bootstrap 5</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-github">
+                  </i> Code</a>
+                <a href="#" class="btn btn-sm btn-primary">
+                  <i class="bi bi-box-arrow-up-right">
+                  </i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://via.placeholder.com/600x400" 
+                  class="card-img-top" 
+                  alt="Project 2">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">
+                Weather App
+              </h5>
+              <p class="card-text text-secondary flex-grow-1">
+                A modern weather display dashboard showing live forecast indicators and dynamic user inputs.
+              </p>
+              <div class="mb-3">
+                <span class="badge bg-secondary">HTML</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">JavaScript</span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-github">
+                  </i> Code</a>
+                <a href="#" class="btn btn-sm btn-primary">
+                  <i class="bi bi-box-arrow-up-right">
+                  </i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Project 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm border-0">
+            <img src="https://via.placeholder.com/600x400"
+                 class="card-img-top" 
+                 alt="Project 3">
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title fw-bold">
+                Task Management UI
+              </h5>
+              <p class="card-text text-secondary flex-grow-1">
+                A clean single-page task manager mockup with interactive elements and dark-mode styling options.
+              </p>
+              <div class="mb-3">
+                <span class="badge bg-secondary">
+                  Bootstrap 5
+                </span>
+                <span class="badge bg-secondary">
+                  CSS Grid
+                </span>
+              </div>
+              <div class="d-flex justify-content-between">
+                <a href="#" class="btn btn-sm btn-outline-primary">
+                  <i class="bi bi-github">
+                  </i> Code</a>
+                <a href="#" class="btn btn-sm btn-primary">
+                  <i class="bi bi-box-arrow-up-right">
+                  </i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ================= 5. CONTACT & FOOTER ================= -->
+  <section id="contact" 
+          class="py-5 bg-dark text-white text-center">
+    <div class="container py-4">
+      <h2 class="fw-bold mb-3">
+        Get In Touch
+      </h2>
+      <p class="lead mb-4 text-secondary">
+        Whether you have a question, job offer, or just want to connect, feel free to drop me a message!
+      </p>
+      <a href="mailto:a.albano.65100.dc@umindanao.edu.ph" 
+          class="btn btn-primary btn-lg mb-4">
+        <i class="bi bi-envelope-fill me-2">
+        </i>Send an Email
+      </a>
+      <div class="d-flex justify-content-center gap-3 fs-3 mb-4">
+        <a href="https://github.com/alessashin" 
+            class="text-white">
+            <i class="bi bi-github">
+            </i></a>
+        <a href="https://linkedin.com" 
+        class="text-white">
+        <i class="bi bi-linkedin">
+        </i></a>
+        <a href="https://twitter.com" class="text-white">
+          <i class="bi bi-twitter-x">
+          </i></a>
+
+      </div>
+      <!-- &copy; 2026 Your Name. Built with Bootstrap 5 -->
+      <p class="text-secondary small mb-0">Asshlene Nicole Albano</p>
+    </div>
+
+  </section>
+
+
+
+  <!-- Bootstrap 5 JavaScript Bundle CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+</body>
+</html>

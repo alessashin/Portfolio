@@ -1,0 +1,24 @@
+/* Enable smooth scrolling for page navigation links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure navbar offset doesn't hide section headers when clicking nav links */
+section {
+  scroll-margin-top: 60px;
+}
+
+/* Transition effects on project cards on hover */
+.card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.bg-light-pink {
+  background-color: #fce4ec; /* Soft light pink */
+  color: #880e4f;           /* Darker text for good readability */
+}
