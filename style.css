@@ -22,3 +22,21 @@ section {
   background-color: #fce4ec; /* Soft light pink */
   color: #880e4f;           /* Darker text for good readability */
 }
+
+
+/**
+   * CONTACT
+   */
+
+  .input-wrapper { grid-template-columns: 1fr 1fr; }
+
+  .form-btn {
+    width: max-content;
+    margin-left: auto;
+  }
+  
+
+ .contact-form label { font-weight: 600; }
+.contact-form input,
+.contact-form textarea { padding: 8px; }
+.contact-form button { cursor: pointer; }

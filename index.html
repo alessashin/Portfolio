@@ -308,55 +308,120 @@
 
 
 
-  <!-- =================  CONTACT & FOOTER ================= -->
-  <section id="contact" 
-          class="py-5 bg-dark text-white text-center">
-    <div class="container py-4">
-      <h2 class="fw-bold mb-3">
-        Get In Touch
-      </h2>
-      <p class="lead mb-4 text-secondary">
-        Whether you have a question, job offer, or just want to connect, feel free to drop me a message!
-      </p>
-      <a href="mailto:a.albano.65100.dc@umindanao.edu.ph" 
-          class="btn btn-primary btn-lg mb-4">
-        <i class="bi bi-envelope-fill me-2">
-        </i>Send an Email
-      </a>
 
-      <!-- GITHUB -->
-      <div class="d-flex justify-content-center gap-3 fs-3 mb-4">
-        <a href="https://github.com/alessashin" 
-            class="text-white">
-            <i class="bi bi-github">
-            </i></a>
+    <!-- ================= CONTACT & FOOTER ================= -->
+<section id="contact" class="py-5 bg-dark text-white text-center">
+  <div class="container py-4">
+    <h2 class="fw-bold mb-3">Get In Touch</h2>
+    <p class="lead mb-4 text-secondary">
+      Whether you have a question, job offer, or just want to connect, feel free to drop me a message!
+    </p>
 
-        <!-- LINKEDIN     -->
-        <a href="https://linkedin.com" 
-        class="text-white">
-        <i class="bi bi-linkedin">
-        </i></a>
+   <!-- Contact Form -->
+<form id="contactForm" class="mx-auto mb-4 text-start text-dark bg-light p-4 rounded-4 shadow-sm border" style="max-width: 500px;">
+  <div class="mb-3">
+    <label for="name" class="form-label fw-semibold">Name</label>
+    <input type="text" class="form-control rounded-3" id="name" name="name" placeholder="Your Name" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label fw-semibold">Email</label>
+    <input type="email" class="form-control rounded-3" id="email" name="email" placeholder="name@example.com" required>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label fw-semibold">Message</label>
+    <textarea class="form-control rounded-3" id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+  </div>
+  <button type="submit" id="submitBtn" class="btn btn-primary btn-lg w-100 rounded-3 shadow-sm">
+    <i class="bi bi-send-fill me-2"></i>Send Message
+  </button>
+</form>
 
-        <!-- FACEBOOK -->
-        <a href="https://web.facebook.com/aslennekol/" 
-        class="text-white">
-          <i class="bi bi-facebook">
-          </i></a>
+<!-- AJAX Script for Popup -->
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevents page reload/redirect
 
-      </div>
-      <!-- &copy; 2026 Aslen. Built with BFF AI -->
-      <p class="text-secondary small mb-0">
-        Asshlene Nicole Albano
-      </p>
+    const form = this;
+    const submitBtn = document.getElementById('submitBtn');
+    const originalBtnText = submitBtn.innerHTML;
+
+    // Show loading indicator on button
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Sending...`;
+
+    // Send data to send.php in the background
+    fetch('send.php', {
+      method: 'POST',
+      body: new FormData(form)
+    })
+    .then(response => response.json())
+    .then(data => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+
+      if (data.status === 'success') {
+        Swal.fire({
+          title: 'Yay! ✨',
+          text: data.message,
+          icon: 'success',
+          confirmButtonText: 'Awesome!',
+          confirmButtonColor: '#0d6efd',
+          background: '#fff',
+          borderRadius: '16px',
+          customClass: {
+            popup: 'rounded-4 shadow-lg'
+          }
+        });
+        form.reset(); // Clear input fields
+      } else {
+        Swal.fire({
+          title: 'Oops... 😅',
+          text: data.message,
+          icon: 'error',
+          confirmButtonText: 'Try Again',
+          confirmButtonColor: '#dc3545',
+          borderRadius: '16px'
+        });
+      }
+    })
+    .catch(() => {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnText;
+
+      Swal.fire({
+        title: 'Oh no! 🙀',
+        text: 'Something went wrong. Please check your connection!',
+        icon: 'error',
+        confirmButtonText: 'Okay',
+        confirmButtonColor: '#dc3545'
+      });
+    });
+  });
+</script>
+
+    <!-- Social links -->
+    <div class="d-flex justify-content-center gap-3 fs-3 mb-4">
+      <a href="https://github.com/alessashin" class="text-white"><i class="bi bi-github"></i></a>
+      <a href="https://linkedin.com" class="text-white"><i class="bi bi-linkedin"></i></a>
+      <a href="https://web.facebook.com/aslennekol/" class="text-white"><i class="bi bi-facebook"></i></a>
     </div>
 
-  </section>
+    <p class="text-secondary small mb-0">Asshlene Nicole Albano</p>
+  </div>
+</section>
+
+
+
+
+
+
 
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-  
+ <!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
 
   
 </body>
