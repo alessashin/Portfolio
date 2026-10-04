@@ -24,19 +24,427 @@ section {
 }
 
 
-/**
-   * CONTACT
-   */
+/* Custom Pink Theme Palette */
+:root {
+  --pink-accent: #ff7597;
+  --pink-hover: #ff527b;
+  --pink-soft-bg: #fff0f3;
+  --pink-border: #ffccd5;
+}
 
-  .input-wrapper { grid-template-columns: 1fr 1fr; }
+/* Contact Wrapper Background */
+.style-contact-wrapper {
+  background: linear-gradient(180deg, #ffffff 0%, #fff5f7 100%);
+}
 
-  .form-btn {
-    width: max-content;
-    margin-left: auto;
-  }
-  
+.text-pink {
+  color: var(--pink-accent) !important;
+}
 
- .contact-form label { font-weight: 600; }
-.contact-form input,
-.contact-form textarea { padding: 8px; }
-.contact-form button { cursor: pointer; }
+.bg-pink-soft {
+  background-color: var(--pink-soft-bg);
+  border: 1px solid var(--pink-border);
+}
+
+.text-pink-dark {
+  color: #c92a52;
+}
+
+/* Info Pills */
+.info-pill {
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+/* Social Buttons */
+.social-circle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 1px solid var(--pink-border);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #495057;
+  font-size: 1.2rem;
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.social-circle-btn:hover {
+  background: var(--pink-accent);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(255, 117, 151, 0.3);
+}
+
+/* Form Card */
+.cute-form-card {
+  background: #ffffff;
+  border-radius: 28px;
+  box-shadow: 0 12px 35px rgba(255, 117, 151, 0.08);
+  border: 1px solid rgba(255, 204, 213, 0.4);
+}
+
+/* Custom Input Styling */
+.cute-input {
+  border-radius: 12px;
+  border: 1.5px solid #eaeaea;
+  padding: 12px 16px;
+  background-color: #fafafa;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.cute-input:focus {
+  background-color: #ffffff;
+  border-color: var(--pink-accent);
+  box-shadow: 0 0 0 4px rgba(255, 117, 151, 0.15);
+}
+
+/* Submit Button */
+.cute-submit-btn {
+  background-color: var(--pink-accent);
+  color: #ffffff;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+  transition: all 0.25s ease;
+}
+
+.cute-submit-btn:hover {
+  background-color: var(--pink-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 117, 151, 0.35);
+}
+
+.cute-input::placeholder {
+  color: #888888;
+  opacity: 0.5;
+  filter: blur(0.4px);  /* Adds a subtle soft blur */
+  transition: filter 0.2s ease, opacity 0.2s ease;
+}
+
+/* Removes blur when the user clicks inside the input */
+.cute-input:focus::placeholder {
+  filter: blur(0px);
+  opacity: 0.3;
+}
+
+
+
+/* Custom Pink Styling for SweetAlert2 Popup */
+.pink-popup-border {
+  border-radius: 24px !important;
+  border: 2px solid #ffccd5 !important;
+  box-shadow: 0 15px 35px rgba(255, 117, 151, 0.2) !important;
+  padding: 1.5rem !important;
+}
+
+.swal2-confirm {
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  box-shadow: 0 4px 12px rgba(255, 117, 151, 0.3) !important;
+}
+
+
+
+
+
+
+/* Color Palette */
+:root {
+  --pink-main: #ff7597;
+  --pink-dark: #e05275;
+  --pink-soft: #fff0f3;
+  --pink-border: #ffccd5;
+  --text-dark: #2c2830;
+}
+
+/* Background Gradients */
+.hero-bg-gradient {
+  background: radial-gradient(circle at 80% 20%, #ffe3e8 0%, #ffffff 60%);
+}
+
+/* Floating Navbar Glass Pill */
+.nav-glass-pill {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1.5px solid var(--pink-border);
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(255, 117, 151, 0.12);
+}
+
+.logo-pink {
+  color: var(--text-dark);
+  letter-spacing: -0.5px;
+}
+
+.dot-accent {
+  color: var(--pink-main);
+  margin-left: 2px;
+  font-size: 0.9em;
+}
+
+/* Nav Links */
+.cute-nav-link {
+  color: #5a5266 !important;
+  padding: 8px 18px !important;
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+.cute-nav-link:hover {
+  color: var(--pink-dark) !important;
+  background-color: var(--pink-soft);
+}
+
+/* Badge Pill */
+.cute-badge-pill {
+  background-color: #ffffff;
+  color: var(--pink-dark);
+  border: 1px solid var(--pink-border);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(255, 117, 151, 0.08);
+}
+
+.ping-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--pink-main);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Hero Typography */
+.text-pink-accent {
+  color: var(--pink-main);
+}
+
+.hero-title {
+  color: var(--text-dark);
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.hero-subtitle {
+  color: #7a7085;
+  font-weight: 500;
+}
+
+.hero-description {
+  max-width: 500px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-cute-primary {
+  background: linear-gradient(135deg, #ff7597 0%, #ff527b 100%);
+  color: #ffffff !important;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 8px 20px rgba(255, 117, 151, 0.35);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-cute-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(255, 117, 151, 0.45);
+}
+
+.btn-cute-secondary {
+  background-color: #ffffff;
+  color: var(--text-dark) !important;
+  padding: 12px 26px;
+  border-radius: 50px;
+  font-weight: 600;
+  border: 1.5px solid var(--pink-border);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: all 0.25s ease;
+}
+
+.btn-cute-secondary:hover {
+  border-color: var(--pink-main);
+  color: var(--pink-dark) !important;
+  background-color: var(--pink-soft);
+  transform: translateY(-2px);
+}
+
+/* Professional Avatar Frame */
+.pro-avatar-wrapper {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  margin: 0 auto;
+}
+
+/* Elegant Soft-Pink Backdrop Accent */
+.pro-avatar-backdrop {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffccd5 0%, #ffe3e8 100%);
+  z-index: 1;
+}
+
+/* Main Profile Image Container */
+.pro-avatar-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pro-avatar-wrapper:hover .pro-avatar-img {
+  transform: translate(-3px, -3px);
+  box-shadow: 0 16px 35px rgba(255, 117, 151, 0.2);
+}
+
+
+
+
+/* About Section Smooth Gradient Background */
+.style-about-wrapper {
+  background: linear-gradient(180deg, #fff5f7 0%, #ffffff 100%);
+}
+
+/* Cute Skill Chips */
+.skill-chip {
+  background-color: #ffffff;
+  color: #2c2830;
+  border: 1.5px solid #ffccd5;
+  padding: 10px 18px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(255, 117, 151, 0.06);
+  transition: all 0.25s ease;
+}
+
+.skill-chip:hover {
+  background-color: #fff0f3;
+  border-color: #ff7597;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 117, 151, 0.18);
+}
+
+
+
+/* Projects Section Background */
+.style-projects-wrapper {
+  background-color: #fdfaeb; /* Very soft warm ambient background */
+  background: linear-gradient(180deg, #ffffff 0%, #fff7f9 100%);
+}
+
+/* Cute Cards Styling */
+.cute-project-card {
+  border-radius: 20px !important;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(255, 117, 151, 0.08) !important;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 1px solid #ffe3e8 !important;
+}
+
+.cute-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(255, 117, 151, 0.18) !important;
+  border-color: #ffccd5 !important;
+}
+
+/* Tech Badges inside cards */
+.cute-tech-badge {
+  background-color: #fff0f3;
+  color: #e05275;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid #ffccd5;
+}
+
+/* Project Action Buttons */
+.btn-project-pink {
+  background-color: #ff7597;
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 6px 16px;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-project-pink:hover {
+  background-color: #ff527b;
+  box-shadow: 0 4px 12px rgba(255, 117, 151, 0.3);
+}
+
+.btn-project-outline {
+  border: 1.5px solid #2d3748;
+  color: #2d3748 !important;
+  font-weight: 600;
+  border-radius: 20px;
+  padding: 5px 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-project-outline:hover {
+  border-color: #ff7597;
+  color: #ff7597 !important;
+  background-color: #fff0f3;
+}
+
+
+/* Footer Styles */
+.style-footer-wrapper {
+  background-color: #ffffff;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #ffe3e8;
+  opacity: 1;
+}
+
+.cute-footer-nav a {
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.cute-footer-nav a:hover {
+  color: #ff7597 !important;
+}
+
+.text-pink {
+  color: #ff7597;
+}
