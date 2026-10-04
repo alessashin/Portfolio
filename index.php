@@ -11,7 +11,7 @@
   <!-- Bootstrap Icons CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet" />
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="style.css" />
 
 
 
@@ -20,7 +20,7 @@
       data-bs-target="#navbar" 
       data-bs-offset="70">
 
-  <!-- ================= 1. NAVBAR ================= -->
+  <!-- =================  NAVBAR ================= -->
   <nav id="navbar" 
   class="navbar navbar-expand-lg 
                 navbar-dark bg-dark 
@@ -71,7 +71,7 @@
   </nav>
    
 
-  <!-- ================= 2. HERO SECTION ================= -->
+  <!-- =================  HOME SECTION ================= -->
   <section 
           id="hero" 
           class="vh-100 d-flex 
@@ -83,10 +83,10 @@
           class="row align-items-center">
         <div class="col-md-7">
           <p 
-              class="text-primary fw-semibold mb-1"
-                  >Hi, my name is   </p>
+              class="text- fw-semibold mb-1"
+                  >Hi, I am   </p>
           <h1 class="display-3 fw-bold mb-2"
-                  >Asshlene Albaño </h1>
+                  >Asshlene Nicole </h1>
           <h2 class="h3 text-muted mb-4"
                   >A Developer & Designer</h2>
           <p class="lead mb-3">
@@ -97,6 +97,8 @@
             <a href="#projects" 
               class="btn btn-primary btn-lg me-2"
                    >View Work</a>
+
+
 
 
  <!-- if i want it downloadable -->
@@ -129,7 +131,7 @@
 
 
 
-  <!-- ================= 3. ABOUT & SKILLS SECTION ================= -->
+  <!-- =================  ABOUT & SKILLS SECTION ================= -->
   <section 
         id="about" 
         class="py-5">
@@ -182,7 +184,7 @@
 
 
 
-  <!-- ================= 4. PROJECTS SECTION ================= -->
+  <!-- =================  PROJECTS SECTION ================= -->
   <section 
         id="projects" 
         class="py-5 bg-light">
@@ -198,29 +200,33 @@
 
       <div class="row g-4">
 
+        
+
         <!-- Project 1 -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0">
-            <img  src="https://via.placeholder.com/600x400" 
+            <img  src="assets/growlogo.png" 
                   class="card-img-top" 
-                  alt="Project 1">
+                  alt="GROW">
 
             <div class="card-body d-flex flex-column">
               <h5 class="card-title fw-bold">
-                E-Commerce Web Page</h5>
+                GROW (Goals, Revenue, Operations, Wisdom)</h5>
               <p class="card-text text-secondary flex-grow-1">
-                A responsive landing page for an online clothing shop built with standard HTML5 and Bootstrap grid.
+                Bridging the gap from manual paper-based tracking growth.
               </p>
 
               <div class="mb-3">
-                <span class="badge bg-secondary">HTML</span>
-                <span class="badge bg-secondary">Bootstrap 5</span>
+                <span class="badge bg-secondary">Kotlin</span>
+                <span class="badge bg-secondary">Java</span>
               </div>
               <div class="d-flex justify-content-between">
-                <a href="#" class="btn btn-sm btn-outline-primary">
+                <a href="https://github.com/AnraDev-1/grow-semproject.git" 
+                class="btn btn-sm btn-outline-primary">
                   <i class="bi bi-github">
                   </i> Code</a>
-                <a href="#" class="btn btn-sm btn-primary">
+                <a href="#" 
+                    class="btn btn-sm btn-primary">
                   <i class="bi bi-box-arrow-up-right">
                   </i> Live Demo</a>
               </div>
@@ -228,6 +234,8 @@
           </div>
         </div>
 
+
+        
         <!-- Project 2 -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 shadow-sm border-0">
@@ -257,6 +265,8 @@
             </div>
           </div>
         </div>
+
+        
 
 
         <!-- Project 3 -->
@@ -296,7 +306,9 @@
   </section>
 
 
-  <!-- ================= 5. CONTACT & FOOTER ================= -->
+
+
+  <!-- =================  CONTACT & FOOTER ================= -->
   <section id="contact" 
           class="py-5 bg-dark text-white text-center">
     <div class="container py-4">
@@ -311,30 +323,40 @@
         <i class="bi bi-envelope-fill me-2">
         </i>Send an Email
       </a>
+
+      <!-- GITHUB -->
       <div class="d-flex justify-content-center gap-3 fs-3 mb-4">
         <a href="https://github.com/alessashin" 
             class="text-white">
             <i class="bi bi-github">
             </i></a>
+
+        <!-- LINKEDIN     -->
         <a href="https://linkedin.com" 
         class="text-white">
         <i class="bi bi-linkedin">
         </i></a>
-        <a href="https://twitter.com" class="text-white">
-          <i class="bi bi-twitter-x">
+
+        <!-- FACEBOOK -->
+        <a href="https://web.facebook.com/aslennekol/" 
+        class="text-white">
+          <i class="bi bi-facebook">
           </i></a>
 
       </div>
-      <!-- &copy; 2026 Your Name. Built with Bootstrap 5 -->
-      <p class="text-secondary small mb-0">Asshlene Nicole Albano</p>
+      <!-- &copy; 2026 Aslen. Built with BFF AI -->
+      <p class="text-secondary small mb-0">
+        Asshlene Nicole Albano
+      </p>
     </div>
 
   </section>
 
 
 
-  <!-- Bootstrap 5 JavaScript Bundle CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<?php include 'script.php'; ?>
+
+  
 
   
 </body>
